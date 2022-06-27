@@ -17,4 +17,10 @@ class Movie{
         $this->relase_year = $_relase_year;
         $this->length = $_length;
     }
+
+    public function movieDiscount(){
+        if($this->genre == 'Azione' || $this->genre == 'Horror'){
+            return $this->price * 0.8;
+        }
+    }
 }
